@@ -1,0 +1,48 @@
+*{margin: 0;padding: 0;}
+html,body{
+  height:100%;
+  position: relative;
+}
+.hello-react-template{
+  color:#F00;
+
+  padding:50px 20px;
+
+  button{
+    border: none;
+    display: block;
+    width:100%;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    overflow: visible;
+    height: 42px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #ffffff;
+    line-height: 42px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    background: #04be02;
+    margin-bottom: 15px;
+    &:active{
+      background: #3cc51f;
+    }
+
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.react-template-wrapper{
+  img{
+    width:100%;
+    display: block;
+  }
+}

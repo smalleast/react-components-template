@@ -1,0 +1,110 @@
+.hr {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    background-color: #e4e4e4;
+    z-index: 2;
+  }
+  &-x {
+    @extend .hr;
+    &:after {
+      width: 100%;
+      height: 1px;
+      transform: scaleY(.5);
+    }
+  }
+  &-y {
+    @extend .hr;
+    &:after {
+      width: 1px;
+      height: 100%;
+      transform: scaleX(.5);
+    }
+  }
+}
+
+.react-template {
+  font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 80%;
+  top: 38.2%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: scale(1.185);
+  transition: transform 0.2s ease-in-out, opacity 0.22s linear;
+  user-select: none;
+  &[hidden] {
+    display: none;
+  }
+  &-content {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  &[data-visible=false]{
+    opacity: 0.01;
+    transform: scale(1.085);
+  }
+
+  &[data-visible=true][data-animating=true]{
+    opacity: 1;
+    transform: scale(1);
+  }
+  &[data-visible=true][data-animating=false]{
+    transform: scale(1);
+  }
+
+
+  &[data-theme=tranparent] {
+  }
+  &[data-theme=ios] {
+    > * {
+      background-color: rgb(255, 255, 255);
+    }
+    .react-template-ft {
+      @extend .hr-x;
+      .react-template-button {
+        &:active {
+          background-color: #ddd;
+        }
+        + .react-template-button {
+          @extend .hr-y;
+        }
+      }
+    }
+  }
+  &-hd {
+    text-align: center;
+    padding: 15px 15px 0 15px;
+    font-size: 16px;
+  }
+  &-bd {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+  }
+  &-ft {
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+
+  }
+  &-button {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #007aff;
+    padding: 0 5px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+  }
+}
