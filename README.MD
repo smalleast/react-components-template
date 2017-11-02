@@ -84,26 +84,26 @@ html引用方法
 
 ## 项目布局
 ```
-|-- build								                          // webpack的配置目录
-|   |-- site.config.js							              // 模块入口的路径配置文件
-|   |-- webpack.base.conf.js							        // webpack编译文件的配置文件
-|   |-- webpack.dev.conf.js							          // 开发使用的编译文件 npm run dev
-|   |-- webpack.prod.conf.js							        // 打包生产编译包的文件 npm run build
-|-- config									                      // 环境的配置目录
-|-- src									                          // 静态源码目录
-|   |-- components						                    // 组件
-|       |-- react-template.js						          // 实现组件的具体js
-|       |-- react-template-ctrl.js						    // 包装组件的dom外框js
-|       |-- styles.css						                // 组件样式
-|   |-- div.js							                      // 测试组件的js入口
-|   |-- dev.scss							                    //	测试组件的样式
-|   |-- main.js								                    // 组件的封装js
-|-- .babelrc							                        // ES6语法编译配置
-|-- .editorconfig						                      // 代码编写规格
-|-- .gitignore							                      // git忽略的文件
-|-- .npmrc							                          // npm配置管理及设置代理
-|-- index.html							                      // 入口html文件
-|-- package.json						                      // 项目及工具的依赖配置文件
-|-- webpack.config.js					                    // webpack 配置文件
-|-- README.md							                        // 说明
+|-- build								                 // webpack的配置目录
+|   |-- site.config.js							     // 模块入口的路径配置文件
+|   |-- webpack.base.conf.js						 // webpack编译文件的配置文件
+|   |-- webpack.dev.conf.js							 // 开发使用的编译文件 npm run dev
+|   |-- webpack.prod.conf.js						 // 打包生产编译包的文件 npm run build
+|-- config									             // 环境的配置目录
+|-- src									                 // 静态源码目录
+|   |-- components						           // 组件
+|       |-- react-template.js						 // 实现组件的具体js
+|       |-- react-template-ctrl.js			 // 包装组件的dom外框js
+|       |-- styles.css						       // 组件样式
+|   |-- div.js							             // 测试组件的js入口
+|   |-- dev.scss							           //	测试组件的样式
+|   |-- main.js								           // 组件的封装js
+|-- .babelrc							               // ES6语法编译配置
+|-- .editorconfig						             // 代码编写规格
+|-- .gitignore							             // git忽略的文件
+|-- .npmrc							                 // npm配置管理及设置代理
+|-- index.html							             // 入口html文件
+|-- package.json						             // 项目及工具的依赖配置文件
+|-- webpack.config.js					           // webpack 配置文件
+|-- README.md							               // 说明
 ```
