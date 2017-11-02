@@ -13,9 +13,7 @@ react + react-dom + ES6/ES7 + webpack + sass + nodejs
  4. react-dom 15.4.1
 ```
 #克隆，或者直接下载
-```
 git clone https://github.com/smalleast/react-template.git
-```
 
 进入文件夹
 cd react-template
@@ -32,10 +30,10 @@ npm run build  正式
 ```
 
 
-###此模板实现了模式弹出框的组件
+### 此模板实现了模式弹出框的组件
 
 
-##代码使用说明
+## 代码使用说明
 ```
 安装组件的命令
 npm install smalleast/react-template --save
