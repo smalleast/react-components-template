@@ -1,51 +1,50 @@
-#react-template
-> Template components for react(alert/confirm &amp; the common modal components).
+### react-template
+```
+模板框架，专注于react的组件开发
+```
 
+## 技术栈
+react + react-dom + ES6/ES7 + webpack + sass + nodejs
 
-## resource:
-+ http://www.cnblogs.com/Kummy/p/4966937.html
-+ https://github.com/steven5538/vue-button
-+ https://yarnpkg.com/en/docs/install
+## 项目运行
+ 1. node v8.1.2
+ 2. npm 5.0.3
+ 3. react 15.4.1
+ 4. react-dom 15.4.1
+```
+#克隆，或者直接下载
+```
+git clone https://github.com/smalleast/react-template.git
+```
 
+进入文件夹
+cd react-template
 
-## properties:
-```javascript
- static propTypes = {
-    header: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-    body: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-    buttons: PropTypes.array,
-    theme: PropTypes.oneOf(['ios', 'tranparent']),
-    className: PropTypes.string,
-    backdropStyle: PropTypes.object,
-    onClick: PropTypes.func
-  }
+安装依赖
+npm install
+```
+
+### 编译环境
+```
+开启本地服务器
+npm run dev    开发
+npm run build  正式
 ```
 
 
-## usage:
-```javascript
-import {ReactTemplate,ReactTemplateCtrl} from 'react-template';
-
-class Body extends React.Component {
-  _click() {
-    ReactTemplateCtrl.hide();
-  }
-
-  render() {
-    return (
-      <div className="cus-body">
-        <p><span className="bd">Hi Man!</span></p>
-        <p>I am from <strong className="bd">Baidu</strong></p>
-        <p><img onClick={this._click.bind(this)} src="http://www.baidu.com/img/bd_logo1.png"/></p>
-      </div>
-    );
-  }
-}
+###此模板实现了模式弹出框的组件
 
 
-class App extends React.Component {
-  componentDidMount() {
-    console.log('will / did..');
+##代码使用说明
+```
+安装组件的命令
+npm install smalleast/react-template --save
+
+页面具体操作
+import {ReactTemplate, ReactTemplateCtrl} from './main';
+
+组件初始化
+componentDidMount() {
     ReactTemplateCtrl.createInstance({
       backdropOptions: {
         zIndex: 11,
@@ -54,46 +53,11 @@ class App extends React.Component {
     });
   }
 
-  _click1() {
+方法具体实现
+_click1() {
     ReactTemplateCtrl.show({
-      header: 'Customize <b style="color:#F00">Template</b>',
-      body: 'Are you feel <b>good</b> today?',
-      theme: 'ios',
-      buttons: [
-        {
-          text: 'option1',
-          onClick: function () {
-          }
-        }, {
-          text: 'option2',
-          onClick: function (item) {
-            console.log('option2', item);
-          }
-        }, {
-          text: 'CLOSE',
-          onClick: function (item) {
-            ReactTemplateCtrl.hide();
-          }
-        }
-      ]
-    });
-  }
-
-
-  _click2() {
-    console.log('click2....');
-    ReactTemplateCtrl.show({
-      header: '<b>Title</b><span style="color:#F00">With Color</span>',
-      body: <Body />,
-      buttons: []
-    });
-  }
-
-  _click3() {
-    console.log('click3....');
-    ReactTemplateCtrl.show({
-      header: 'IOS Settings',
-      body: 'Are you sure to change this one?',
+      header: '头部文案',
+      body: '弹出框内容',
       theme: 'transparent',
       buttons: [{
         text: 'OK',
@@ -104,62 +68,44 @@ class App extends React.Component {
     });
   }
 
-  _click4() {
-    ReactTemplateCtrl.show({
-      header: null,
-      body: 'NO header content.',
-      buttons: [{
-        text: 'OK',
-        onClick: function (item) {
-          ReactTemplateCtrl.hide();
-        }
-      }]
-    });
-  }
 
-  _click5() {
-    ReactTemplateCtrl.show({
-      header: null,
-      body: 'NO header content',
-      theme: 'ios',
-      onClick: function () {
-        ReactTemplateCtrl.hide();
-      },
-      buttons: [{
-        text: 'options',
-        onClick: function (item) {
-          ReactTemplateCtrl.hide();
-        }
-      }, {
-        text: 'OK',
-        onClick: function (item) {
-          ReactTemplateCtrl.hide();
-        }
-      }, {
-        text: 'close',
-        onClick: function (item) {
-          ReactTemplateCtrl.hide(() => {
-            console.log('close...');
-          });
-        }
-      }]
-    }, () => {
-      console.log('show....');
-    });
-  }
-
-  render() {
-    return (
-      <div className="hello-react-template">
-        <button onClick={this._click1.bind(this)}>TEST MODAL</button>
-        <button onClick={this._click2.bind(this)}>TEST MODAL- Component body</button>
-        <button onClick={this._click3.bind(this)}>IOS Alert</button>
-        <button onClick={this._click4.bind(this)}>IOS Alert4</button>
-        <button onClick={this._click5.bind(this)}>TEST MODAL 5</button>
-      </div>
-    );
-  }
-}
+html引用方法
+ <button onClick={this._click1.bind(this)}>TEST MODAL</button>
+```
 
 
+
+
+## 说明
+```
+>  如有问题或者遇到坑请直接在 Issues 中提，或者可以加我的QQ 382026180
+
+>  如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
+
+```
+
+## 项目布局
+```
+|-- build								                          // webpack的配置目录
+|   |-- site.config.js							              // 模块入口的路径配置文件
+|   |-- webpack.base.conf.js							        // webpack编译文件的配置文件
+|   |-- webpack.dev.conf.js							          // 开发使用的编译文件 npm run dev
+|   |-- webpack.prod.conf.js							        // 打包生产编译包的文件 npm run build
+|-- config									                      // 环境的配置目录
+|-- src									                          // 静态源码目录
+|   |-- components						                    // 组件
+|       |-- react-template.js						          // 实现组件的具体js
+|       |-- react-template-ctrl.js						    // 包装组件的dom外框js
+|       |-- styles.css						                // 组件样式
+|   |-- div.js							                      // 测试组件的js入口
+|   |-- dev.scss							                    //	测试组件的样式
+|   |-- main.js								                    // 组件的封装js
+|-- .babelrc							                        // ES6语法编译配置
+|-- .editorconfig						                      // 代码编写规格
+|-- .gitignore							                      // git忽略的文件
+|-- .npmrc							                          // npm配置管理及设置代理
+|-- index.html							                      // 入口html文件
+|-- package.json						                      // 项目及工具的依赖配置文件
+|-- webpack.config.js					                    // webpack 配置文件
+|-- README.md							                        // 说明
 ```
