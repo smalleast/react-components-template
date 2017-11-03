@@ -9,8 +9,8 @@ base.entry = {
 base.output = {
   path: config.build.assetsRoot,
   publicPath: config.build.assetsPublicPath,
-  filename: 'react-template.js',
-  library: 'ReactTemplate',
+  filename: 'react-components-template.js',
+  library: 'reactComponentsTemplate',
   libraryTarget: 'umd'
 }
 

@@ -1,9 +1,9 @@
 import './dev.scss';
-import {ReactTemplate, ReactTemplateCtrl} from './main';
+import {reactComponentsTemplate, reactComponentsTemplateCtrl} from './main';
 
 class Body extends React.Component {
   _click() {
-    ReactTemplateCtrl.hide();
+    reactComponentsTemplateCtrl.hide();
   }
 
   render() {
@@ -21,7 +21,7 @@ class Body extends React.Component {
 class App extends React.Component {
   componentDidMount() {
     console.log('will / did..');
-    ReactTemplateCtrl.createInstance({
+    reactComponentsTemplateCtrl.createInstance({
       backdropOptions: {
         zIndex: 11,
         opacity: 0.1
@@ -30,7 +30,7 @@ class App extends React.Component {
   }
 
   _click1() {
-    ReactTemplateCtrl.show({
+    reactComponentsTemplateCtrl.show({
       header: 'Customize <b style="color:#F00">Template</b>',
       body: 'Are you feel <b>good</b> today?',
       theme: 'ios',
@@ -47,7 +47,7 @@ class App extends React.Component {
         }, {
           text: 'CLOSE',
           onClick: function (item) {
-            ReactTemplateCtrl.hide();
+            reactComponentsTemplateCtrl.hide();
           }
         }
       ]
@@ -57,7 +57,7 @@ class App extends React.Component {
 
   _click2() {
     console.log('click2....');
-    ReactTemplateCtrl.show({
+    reactComponentsTemplateCtrl.show({
       header: '<b>Title</b><span style="color:#F00">With Color</span>',
       body: <Body />,
       buttons: []
@@ -66,54 +66,54 @@ class App extends React.Component {
 
   _click3() {
     console.log('click3....');
-    ReactTemplateCtrl.show({
+    reactComponentsTemplateCtrl.show({
       header: 'IOS Settings',
       body: 'Are you sure to change this one?',
       theme: 'transparent',
       buttons: [{
         text: 'OK',
         onClick: function (item) {
-          ReactTemplateCtrl.hide();
+          reactComponentsTemplateCtrl.hide();
         }
       }]
     });
   }
 
   _click4() {
-    ReactTemplateCtrl.show({
+    reactComponentsTemplateCtrl.show({
       header: null,
       body: 'NO header content.',
       buttons: [{
         text: 'OK',
         onClick: function (item) {
-          ReactTemplateCtrl.hide();
+          reactComponentsTemplateCtrl.hide();
         }
       }]
     });
   }
 
   _click5() {
-    ReactTemplateCtrl.show({
+    reactComponentsTemplateCtrl.show({
       header: null,
       body: 'NO header content',
       theme: 'ios',
       onClick: function () {
-        ReactTemplateCtrl.hide();
+        reactComponentsTemplateCtrl.hide();
       },
       buttons: [{
         text: 'options',
         onClick: function (item) {
-          ReactTemplateCtrl.hide();
+          reactComponentsTemplateCtrl.hide();
         }
       }, {
         text: 'OK',
         onClick: function (item) {
-          ReactTemplateCtrl.hide();
+          reactComponentsTemplateCtrl.hide();
         }
       }, {
         text: 'close',
         onClick: function (item) {
-          ReactTemplateCtrl.hide(() => {
+          reactComponentsTemplateCtrl.hide(() => {
             console.log('close...');
           });
         }
@@ -125,7 +125,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="hello-react-template">
+      <div className="hello-react-components-template">
         <button onClick={this._click1.bind(this)}>TEST MODAL</button>
         <button onClick={this._click2.bind(this)}>TEST MODAL- Component body</button>
         <button onClick={this._click3.bind(this)}>IOS Alert</button>

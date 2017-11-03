@@ -1,4 +1,4 @@
-# react-template
+# react-components-template
 ```
 模板框架，专注于react的组件开发
 ```
@@ -13,10 +13,10 @@ react + react-dom + ES6/ES7 + webpack + sass + nodejs
  4. react-dom 15.4.1
 ```
 #克隆，或者直接下载
-git clone https://github.com/smalleast/react-template.git
+git clone https://github.com/smalleast/react-components-template.git
 
 进入文件夹
-cd react-template
+cd react-components-template
 
 安装依赖
 npm install
@@ -36,14 +36,14 @@ npm run build  正式
 ## 代码使用说明
 ```
 安装组件的命令
-npm install smalleast/react-template --save
+npm install smalleast/react-components-template --save
 
 页面具体操作
-import {ReactTemplate, ReactTemplateCtrl} from './main';
+import {reactComponentsTemplate, reactComponentsTemplateCtrl} from './main';
 
 组件初始化
 componentDidMount() {
-    ReactTemplateCtrl.createInstance({
+    reactComponentsTemplateCtrl.createInstance({
       backdropOptions: {
         zIndex: 11,
         opacity: 0.1
@@ -53,14 +53,14 @@ componentDidMount() {
 
 方法具体实现
 _click1() {
-    ReactTemplateCtrl.show({
+    reactComponentsTemplateCtrl.show({
       header: '头部文案',
       body: '弹出框内容',
       theme: 'transparent',
       buttons: [{
         text: 'OK',
         onClick: function (item) {
-          ReactTemplateCtrl.hide();
+          reactComponentsTemplateCtrl.hide();
         }
       }]
     });
@@ -92,8 +92,8 @@ html引用方法
 |-- config				// 环境的配置目录
 |-- src				// 静态源码目录
 |   |-- components				// 组件
-|       |-- react-template.js				// 实现组件的具体js
-|       |-- react-template-ctrl.js				// 包装组件的dom外框js
+|       |-- react-components-template.js				// 实现组件的具体js
+|       |-- react-components-template-ctrl.js				// 包装组件的dom外框js
 |       |-- styles.css				// 组件样式
 |   |-- div.js				// 测试组件的js入口
 |   |-- dev.scss				//	测试组件的样式

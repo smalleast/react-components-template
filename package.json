@@ -1,29 +1,29 @@
 {
-  "name": "react-template",
+  "name": "react-components-template",
   "version": "0.1.0",
   "description": "Template components for react(alert/confirm &amp; the common modal components).",
   "author": "smalleast <382026180@qq.com>",
   "keywords": [
     "components",
-    "react-template",
+    "react-components-template",
     "ui",
     "theme"
   ],
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smalleast/react-template.git"
+    "url": "git+https://github.com/smalleast/react-components-template.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/smalleast/react-template/issues"
+    "url": "https://github.com/smalleast/react-components-template/issues"
   },
-  "homepage": "https://github.com/smalleast/react-template",
+  "homepage": "https://github.com/smalleast/react-components-template",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js"
   },
-  "main": "./dist/react-template.js",
+  "main": "./dist/react-components-template.js",
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "autoprefixer-loader": "^3.2.0",

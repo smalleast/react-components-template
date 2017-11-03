@@ -29,7 +29,7 @@
   }
 }
 
-.react-template {
+.react-components-template {
   font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
   width: 80%;
   top: 38.2%;
@@ -66,13 +66,13 @@
     > * {
       background-color: rgb(255, 255, 255);
     }
-    .react-template-ft {
+    .react-components-template-ft {
       @extend .hr-x;
-      .react-template-button {
+      .react-components-template-button {
         &:active {
           background-color: #ddd;
         }
-        + .react-template-button {
+        + .react-components-template-button {
           @extend .hr-y;
         }
       }

@@ -1,7 +1,7 @@
-import ReactTemplate from 'components/react-template';
-import ReactTemplateCtrl from 'components/react-template-ctrl';
+import reactComponentsTemplate from 'components/react-components-template';
+import reactComponentsTemplateCtrl from 'components/react-components-template-ctrl';
 
 module.exports = {
-  ReactTemplate,
-  ReactTemplateCtrl
+  reactComponentsTemplate,
+  reactComponentsTemplateCtrl
 };

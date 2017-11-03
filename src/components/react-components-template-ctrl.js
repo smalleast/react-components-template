@@ -1,10 +1,10 @@
-import ReactTemplate from 'components/react-template';
+import reactComponentsTemplate from 'components/react-components-template';
 
 let instance;
 
-export default class ReactTemplateCtrl {
+export default class reactComponentsTemplateCtrl {
   static createInstance(inProps) {
-    instance = instance || ReactTemplate.newInstance(inProps);
+    instance = instance || reactComponentsTemplate.newInstance(inProps);
     return instance;
   }
 

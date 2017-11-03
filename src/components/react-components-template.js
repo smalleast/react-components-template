@@ -10,7 +10,7 @@ import React, {PropTypes} from 'react';
 import noop from 'noop';
 import objectAssign from 'object-assign';
 
-export default class ReactTemplate extends React.Component {
+export default class reactComponentsTemplate extends React.Component {
   static propTypes = {
     header: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     body: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
@@ -22,8 +22,8 @@ export default class ReactTemplate extends React.Component {
   }
 
   static newInstance(inProps) {
-    return documentAppend(ReactTemplate, inProps, {
-      className: 'react-template-wrapper'
+    return documentAppend(reactComponentsTemplate, inProps, {
+      className: 'react-components-template-wrapper'
     });
   }
 
@@ -97,43 +97,43 @@ export default class ReactTemplate extends React.Component {
     const { visible, onClick, hidden, animating, theme} = this.state;
     const {backdropStyle}=this.props;
     return (
-      <div className="react-template-container">
+      <div className="react-components-template-container">
         <ReactBackdrop style={backdropStyle} visible={visible} onClick={onClick.bind(this)}/>
         <div
           ref="root"
           data-visible={visible}
           data-animating={animating}
           data-theme={theme}
-          className={classNames('react-template', this.props.className)}
+          className={classNames('react-components-template', this.props.className)}
           hidden={hidden}
           style={{
             marginTop: `-${this.state.style.height / 2}px`,
             marginLeft: `-${this.state.style.width / 2}px`
           }}
           onTransitionEnd={this._onTransitionEnd}>
-          <div className="react-template-content">
+          <div className="react-components-template-content">
             {
               this.state.header && typeof(this.state.header) === 'string' &&
-              <div className="react-template-hd" dangerouslySetInnerHTML={{__html: this.state.header}}/>
+              <div className="react-components-template-hd" dangerouslySetInnerHTML={{__html: this.state.header}}/>
             }
             {
               this.state.header && typeof(this.state.header) === 'object' &&
-              <div className="react-template-hd">{this.state.header}</div>
+              <div className="react-components-template-hd">{this.state.header}</div>
             }
 
             {
               this.state.body && typeof(this.state.body) === 'string' &&
-              <div className="react-template-bd" dangerouslySetInnerHTML={{__html: this.state.body}}/>
+              <div className="react-components-template-bd" dangerouslySetInnerHTML={{__html: this.state.body}}/>
             }
             {
               this.state.body && typeof(this.state.body) === 'object' &&
-              <div className="react-template-bd">{this.state.body}</div>
+              <div className="react-components-template-bd">{this.state.body}</div>
             }
 
             {
-              this.state.buttons.length > 0 && <div className="react-template-ft">
+              this.state.buttons.length > 0 && <div className="react-components-template-ft">
                 {this.state.buttons.map((item, index) => {
-                  return <div key={index} className="react-template-button"
+                  return <div key={index} className="react-components-template-button"
                               onClick={item.onClick.bind(this)}>{item.text}</div>
                 })}
               </div>
