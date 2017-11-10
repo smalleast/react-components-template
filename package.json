@@ -78,6 +78,8 @@
   "dependencies": {
     "calc-style": "github:smalleast/calc-style",
     "classnames": "^2.2.5",
+    "noop": "github:smalleast/noop",
+    "prop-types": "^15.6.0",
     "react": "^15.4.1",
     "react-backdrop": "github:smalleast/react-backdrop",
     "react-document-append": "github:smalleast/react-document-append",

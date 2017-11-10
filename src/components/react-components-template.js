@@ -4,11 +4,8 @@
 import './style.scss';
 import documentAppend from 'react-document-append';
 import calcStyle from 'calc-style';
-import classNames from 'classnames';
 import {ReactBackdrop} from 'react-backdrop';
-import React, {PropTypes} from 'react';
 import noop from 'noop';
-import objectAssign from 'object-assign';
 
 export default class reactComponentsTemplate extends React.Component {
   static propTypes = {
@@ -19,7 +16,7 @@ export default class reactComponentsTemplate extends React.Component {
     className: PropTypes.string,
     backdropStyle: PropTypes.object,
     onClick: PropTypes.func
-  }
+  };
 
   static newInstance(inProps) {
     return documentAppend(reactComponentsTemplate, inProps, {
@@ -37,7 +34,7 @@ export default class reactComponentsTemplate extends React.Component {
         opacity: 0.7
       }
     }
-  }
+  };
 
   componentWillMount() {
 
@@ -91,11 +88,11 @@ export default class reactComponentsTemplate extends React.Component {
         this._callback();
       }
     })
-  }
+  };
 
   render() {
-    const { visible, onClick, hidden, animating, theme} = this.state;
-    const {backdropStyle}=this.props;
+    const {visible, onClick, hidden, animating, theme} = this.state;
+    const {backdropStyle} = this.props;
     return (
       <div className="react-components-template-container">
         <ReactBackdrop style={backdropStyle} visible={visible} onClick={onClick.bind(this)}/>
