@@ -1,6 +1,6 @@
 {
   "name": "react-components-template",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Template components for react(alert/confirm &amp; the common modal components).",
   "author": "smalleast <382026180@qq.com>",
   "keywords": [
